@@ -1,0 +1,155 @@
+/* --- CONFIGURAÇÕES GERAIS DO SITE --- */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: transparent; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* O espaçamento padrão de 50px fica apenas na primeira tela */
+#home {
+    padding: 50px;
+}
+
+/* --- CONFIGURAÇÃO DO VÍDEO DE FUNDO --- */
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    pointer-events: none; 
+    filter: blur(5px); 
+    transform: scale(1.35); 
+}
+
+/* --- TELA 1: ELEMENTOS DA PÁGINA INICIAL --- */
+h1 {
+    color: #71E86B; 
+    font-size: 55px;
+    text-transform: uppercase;
+    font-family: 'Impact', sans-serif; 
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  3px 0 #000; 
+    margin-bottom: 60px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.galeria img {
+    width: 320px; 
+    height: 400px;
+    object-fit: cover;
+    background-color: #f4f4f0;
+    padding: 10px 10px 40px 10px; 
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+    margin: -20px; 
+}
+
+.galeria img:nth-child(1) { transform: rotate(-15deg); z-index: 1;}
+.galeria img:nth-child(2) { transform: rotate(-5deg); z-index: 2; }
+.galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
+.galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
+
+.btn-proximo {
+    background-color: #71E86B;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: 6px solid black;
+    border-radius: 20px; 
+    cursor: pointer;
+    box-shadow: 4px 4px 0px black; 
+}
+
+/* --- AUXILIAR DO JAVASCRIPT --- */
+.escondida {
+    display: none !important;
+}
+
+/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA (CONTEÚDO AZUL TOTAL) --- */
+#secao-definicoes {
+    background-color: #8da9c4; /* O azul cobrindo tudo de ponta a ponta */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white; /* Garante que todas as letras fiquem brancas nesta seção */
+    position: relative;
+    z-index: 5; /* Sobrevale ao vídeo de fundo, cobrindo-o por completo */
+}
+
+/* Mosaico posicionado perfeitamente no topo */
+.galeria-topo {
+    width: 100%;
+    background-color: #8da9c4;
+    display: flex;
+    justify-content: center;
+}
+
+.img-mosaico {
+    width: 100%;
+    max-width: 1920px; 
+    height: auto;
+    display: block;
+}
+
+/* Espaçamento interno dos textos */
+.conteudo-definicoes {
+    padding: 60px 12% 100px 12%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Alinhamento à esquerda conforme solicitado */
+}
+
+/* 1º Maior texto da página */
+.titulo-principal-agro {
+    font-size: 75px; 
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    color: white;
+}
+
+/* 2º Maior texto da página */
+.titulo-agricultura {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* Explicação ligeiramente menor que o título de agricultura */
+.texto-explicacao p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* Referências bem pequenas no rodapé */
+.referencias-pequenas {
+    margin-top: 70px;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.85;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    color: white;
+}
