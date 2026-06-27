@@ -8,12 +8,10 @@ body {
     overflow-x: hidden;
 }
 
-/* O espaçamento padrão de 50px fica apenas na primeira tela */
 #home {
     padding: 50px;
 }
 
-/* --- CONFIGURAÇÃO DO VÍDEO DE FUNDO --- */
 .video-fundo {
     position: fixed;
     top: 0;
@@ -64,7 +62,8 @@ h1 {
 .galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
 .galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
 
-.btn-proximo {
+/* --- BOTÕES VERDES PADRONIZADOS --- */
+.btn-verde {
     background-color: #71E86B;
     color: white;
     font-size: 20px;
@@ -74,29 +73,33 @@ h1 {
     border-radius: 20px; 
     cursor: pointer;
     box-shadow: 4px 4px 0px black; 
+    text-transform: uppercase;
 }
 
-/* --- AUXILIAR DO JAVASCRIPT --- */
+.btn-verde:active {
+    transform: translateY(3px); /* Efeito de apertar o botão */
+    box-shadow: 1px 1px 0px black;
+}
+
 .escondida {
     display: none !important;
 }
 
-/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA (CONTEÚDO AZUL TOTAL) --- */
-#secao-definicoes {
-    background-color: #8bafcc; /* O azul cobrindo tudo de ponta a ponta */
+/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA --- */
+#secao-definicoes, #secao-topico-3 {
+    background-color: #8da9c4; 
     min-height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
-    color: white; /* Garante que todas as letras fiquem brancas nesta seção */
+    color: white; 
     position: relative;
-    z-index: 5; /* Sobrevale ao vídeo de fundo, cobrindo-o por completo */
+    z-index: 5; 
 }
 
-/* Mosaico posicionado perfeitamente no topo */
-.galeria-topo {
+.galeria-topo, .galeria-rodape {
     width: 100%;
-    background-color: #8bafcc;
+    background-color: #8da9c4;
     display: flex;
     justify-content: center;
 }
@@ -108,15 +111,13 @@ h1 {
     display: block;
 }
 
-/* Espaçamento interno dos textos */
 .conteudo-definicoes {
-    padding: 60px 12% 100px 12%;
+    padding: 60px 12% 50px 12%; /* Reduzi o padding inferior para aproximar do rodapé */
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Alinhamento à esquerda conforme solicitado */
+    text-align: left; 
 }
 
-/* 1º Maior texto da página */
 .titulo-principal-agro {
     font-size: 75px; 
     font-family: 'Arial Black', sans-serif;
@@ -126,7 +127,6 @@ h1 {
     color: white;
 }
 
-/* 2º Maior texto da página */
 .titulo-agricultura {
     font-size: 48px;
     font-family: 'Arial', sans-serif;
@@ -135,7 +135,6 @@ h1 {
     color: white;
 }
 
-/* Explicação ligeiramente menor que o título de agricultura */
 .texto-explicacao p {
     font-size: 22px;
     line-height: 1.6;
@@ -143,13 +142,19 @@ h1 {
     color: white;
 }
 
-/* Referências bem pequenas no rodapé */
 .referencias-pequenas {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 12px;
     line-height: 1.4;
     opacity: 0.85;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 20px;
     color: white;
+}
+
+/* Espaço para o botão no final da página 2 */
+.container-proximo-topico {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px; 
 }
