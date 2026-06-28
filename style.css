@@ -1,160 +1,194 @@
-/* --- CONFIGURAÇÕES GERAIS DO SITE --- */
-body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-color: transparent; 
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
-}
-
-#home {
-    padding: 50px;
-}
-
-.video-fundo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; 
-    pointer-events: none; 
-    filter: blur(5px); 
-    transform: scale(1.35); 
-}
-
-/* --- TELA 1: ELEMENTOS DA PÁGINA INICIAL --- */
-h1 {
-    color: #71E86B; 
-    font-size: 55px;
-    text-transform: uppercase;
-    font-family: 'Impact', sans-serif; 
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-         0px  3px 0 #000; 
-    margin-bottom: 60px;
-}
-
-.galeria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.galeria img {
-    width: 320px; 
-    height: 400px;
-    object-fit: cover;
-    background-color: #f4f4f0;
-    padding: 10px 10px 40px 10px; 
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
-    margin: -20px; 
-}
-
-.galeria img:nth-child(1) { transform: rotate(-15deg); z-index: 1;}
-.galeria img:nth-child(2) { transform: rotate(-5deg); z-index: 2; }
-.galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
-.galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
-
-/* --- BOTÕES VERDES PADRONIZADOS --- */
-.btn-verde {
-    background-color: #71E86B;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px 40px;
-    border: 6px solid black;
-    border-radius: 20px; 
-    cursor: pointer;
-    box-shadow: 4px 4px 0px black; 
-    text-transform: uppercase;
-}
-
-.btn-verde:active {
-    transform: translateY(3px); /* Efeito de apertar o botão */
-    box-shadow: 1px 1px 0px black;
+    background-color: #000;
 }
 
 .escondida {
     display: none !important;
 }
 
-/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA --- */
-#secao-definicoes, #secao-topico-3 {
-    background-color: #8bafcc; 
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white; 
+.video-fundo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#home {
     position: relative;
-    z-index: 5; 
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+#home h1 {
+    font-size: 60px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #000000;
+    margin-bottom: 40px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 5px 5px 0px #000000;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+#secao-definicoes, 
+#secao-importancia, 
+#secao-sustentabilidade {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 .galeria-topo, .galeria-rodape {
     width: 100%;
-    background-color: #8bafcc;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    line-height: 0;
 }
 
 .img-mosaico {
     width: 100%;
-    max-width: 1920px; 
     height: auto;
-    display: block;
+    object-fit: cover;
 }
 
 .conteudo-definicoes {
-    padding: 60px 12% 50px 12%; /* Reduzi o padding inferior para aproximar do rodapé */
-    max-width: 1200px;
+    flex: 1;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: left; 
+    padding: 60px 20px;
+    background-color: #ffffff;
 }
 
 .titulo-principal-agro {
-    font-size: 75px; 
-    font-family: 'Arial Black', sans-serif;
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 50px;
-    color: white;
 }
 
 .titulo-agricultura {
-    font-size: 48px;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: white;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.texto-explicacao {
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .texto-explicacao p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-verde {
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 35px;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn-verde:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #000000;
+}
+
+.btn-verde:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.container-proximo-topico {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .referencias-pequenas {
-    margin-top: 50px;
-    font-size: 12px;
-    line-height: 1.4;
-    opacity: 0.85;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 60px;
     padding-top: 20px;
-    color: white;
+    border-top: 1px solid #dddddd;
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
 }
 
-/* Espaço para o botão no final da página 2 */
-.container-proximo-topico {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px; 
+.referencias-pequenas p {
+    margin-bottom: 8px;
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 40px;
+    }
+    .titulo-principal-agro {
+        font-size: 32px !important;
+    }
+    .galeria img {
+        width: 140px;
+        height: 140px;
+    }
+    .texto-explicacao {
+        font-size: 16px;
+    }
 }
