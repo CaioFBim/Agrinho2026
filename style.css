@@ -85,8 +85,10 @@ h1 {
     display: none !important;
 }
 
-/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA --- */
-#secao-definicoes, #secao-topico-3 {
+/* --- TELAS DE CONTEÚDO (PÁGINAS 2, 3 e 4) --- */
+#secao-definicoes, 
+#secao-importancia, 
+#secao-sustentabilidade {
     background-color: #8bafcc; 
     min-height: 100vh;
     width: 100%;
@@ -112,7 +114,7 @@ h1 {
 }
 
 .conteudo-definicoes {
-    padding: 60px 12% 50px 12%; /* Reduzi o padding inferior para aproximar do rodapé */
+    padding: 60px 12% 50px 12%; 
     max-width: 1200px;
     margin: 0 auto;
     text-align: left; 
@@ -152,20 +154,9 @@ h1 {
     color: white;
 }
 
-/* Espaço para o botão no final da página 2 */
+/* Espaço para o botão no final das páginas */
 .container-proximo-topico {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 40px; 
-}
-#secao-importancia, 
-#secao-sustentabilidade {
-    background-color: #8bafcc !important; 
-    position: relative;
-    z-index: 2; 
-}
-
-#secao-importancia .conteudo-definicoes, 
-#secao-sustentabilidade .conteudo-definicoes {
-    background-color: #8bafcc !important;
 }
