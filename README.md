@@ -4,7 +4,6 @@ O presente projeto consiste no desenvolvimento de uma plataforma digital informa
 
 ## 1 JUSTIFICATIVA E ALINHAMENTO TEMÁTICO
 
-**Tema norteador (Concurso Agrinho):** *"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"*
 
 A elaboração deste trabalho justifica-se pelo seu alinhamento irrestrito ao tema proposto. O projeto demonstra, de maneira fundamentada, que a robustez econômica do setor rural (configurando um "Agro forte") atua em interdependência com a conservação ambiental (visando um "futuro sustentável"). O agronegócio atua como pilar da segurança alimentar global e representa parcela significativa do Produto Interno Burto (PIB) nacional, sendo o "equilíbrio entre produção e meio ambiente" uma condição indispensável para a sua continuidade.
 

@@ -1,4 +1,4 @@
-/* --- CONFIGURAÇÕES GERAIS DO SITE --- */
+/* Define a fonte padrão, remove as margens nativas e impede barra de rolagem horizontal */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -12,6 +12,7 @@ body {
     padding: 50px;
 }
 
+/* Configuração do iframe do vídeo para cobrir todo o fundo, com efeito embaçado (blur) */
 .video-fundo {
     position: fixed;
     top: 0;
@@ -24,7 +25,10 @@ body {
     transform: scale(1.35); 
 }
 
-/* --- TELA 1: ELEMENTOS DA PÁGINA INICIAL --- */
+/* ========================================== */
+/* TELA 1: ELEMENTOS DA PÁGINA INICIAL        */
+/* ========================================== */
+/* Estilização do título principal com fonte Impact e sombra 3D preta */
 h1 {
     color: #71E86B; 
     font-size: 55px;
@@ -39,6 +43,7 @@ h1 {
     margin-bottom: 60px;
 }
 
+/* Configuração da galeria de imagens para alinhamento horizontal */
 .galeria {
     display: flex;
     justify-content: center;
@@ -46,6 +51,7 @@ h1 {
     margin-bottom: 50px;
 }
 
+/* Estilo tipo 'polaroid' para as imagens (borda branca e sombra) */
 .galeria img {
     width: 320px; 
     height: 400px;
@@ -57,12 +63,16 @@ h1 {
     margin: -20px; 
 }
 
+/* Inclina cada foto da galeria em um ângulo diferente para dar efeito bagunçado */
 .galeria img:nth-child(1) { transform: rotate(-15deg); z-index: 1;}
 .galeria img:nth-child(2) { transform: rotate(-5deg); z-index: 2; }
 .galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
 .galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
 
-/* --- BOTÕES VERDES PADRONIZADOS --- */
+/* ========================================== */
+/* BOTÕES VERDES PADRONIZADOS                 */
+/* ========================================== */
+/* Visual padrão dos botões de avançar tópicos */
 .btn-verde {
     background-color: #71E86B;
     color: white;
@@ -76,16 +86,21 @@ h1 {
     text-transform: uppercase;
 }
 
+/* Efeito de "apertar" o botão quando o usuário clica (remove a sombra e desce o botão) */
 .btn-verde:active {
     transform: translateY(3px); 
     box-shadow: 1px 1px 0px black;
 }
 
+/* Classe utilitária usada pelo JavaScript para sumir com as páginas que não estão sendo lidas */
 .escondida {
     display: none !important;
 }
 
-/* --- TELAS DE CONTEÚDO (PÁGINAS 2, 3 e 4) --- */
+/* ========================================== */
+/* TELAS DE CONTEÚDO (PÁGINAS 2, 3 e 4)       */
+/* ========================================== */
+/* Garante que o fundo seja da cor correta e que essas páginas cubram o vídeo inicial */
 #secao-definicoes, 
 #secao-importancia, 
 #secao-sustentabilidade {
@@ -99,6 +114,7 @@ h1 {
     z-index: 5; 
 }
 
+/* Centraliza os mosaicos de imagem do topo e rodapé */
 .galeria-topo, .galeria-rodape {
     width: 100%;
     background-color: #8bafcc;
@@ -106,6 +122,7 @@ h1 {
     justify-content: center;
 }
 
+/* Ajusta o tamanho máximo dos mosaicos */
 .img-mosaico {
     width: 100%;
     max-width: 1920px; 
@@ -113,6 +130,7 @@ h1 {
     display: block;
 }
 
+/* Formatação da caixa principal que segura os textos */
 .conteudo-definicoes {
     padding: 60px 12% 50px 12%; 
     max-width: 1200px;
@@ -120,6 +138,7 @@ h1 {
     text-align: left; 
 }
 
+/* Títulos principais dentro dos tópicos (ex: 1º Tópico) */
 .titulo-principal-agro {
     font-size: 75px; 
     font-family: 'Arial Black', sans-serif;
@@ -129,6 +148,7 @@ h1 {
     color: white;
 }
 
+/* Subtítulos menores (ex: AGRICULTURA, AGRONEGÓCIO) */
 .titulo-agricultura {
     font-size: 48px;
     font-family: 'Arial', sans-serif;
@@ -137,14 +157,17 @@ h1 {
     color: white;
 }
 
+/* Estilo padrão para os parágrafos de explicação */
 .texto-explicacao p {
     font-size: 22px;
     line-height: 1.6;
     margin-bottom: 25px;
     color: white;
-    transition: font-size 0.2s ease; /* Transição suave ao mudar tamanho da fonte */
+    /* Transição suave de tempo ao mudar tamanho da fonte clicando em A+ ou A- */
+    transition: font-size 0.2s ease; 
 }
 
+/* Formatação do bloco de referências ABNT no final de cada página */
 .referencias-pequenas {
     margin-top: 50px;
     font-size: 12px;
@@ -155,22 +178,27 @@ h1 {
     color: white;
 }
 
+/* Espaçamento extra ao redor dos botões de "próximo tópico" */
 .container-proximo-topico {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 40px; 
 }
 
-/* --- CONTROLES DE FONTE (ACESSIBILIDADE) --- */
+/* ========================================== */
+/* CONTROLES DE FONTE (ACESSIBILIDADE)        */
+/* ========================================== */
+/* Caixa que segura os dois botões, fixada no canto superior direito */
 .controles-fonte {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 9999; /* Garante que os botões fiquem acima de absolutamente tudo no site */
     display: flex;
     gap: 10px;
 }
 
+/* Estilo redondinho para os botões A+ e A- */
 .btn-fonte {
     background-color: #71E86B;
     color: black;
@@ -185,6 +213,7 @@ h1 {
     transition: transform 0.1s;
 }
 
+/* Efeito ao clicar no botão de acessibilidade */
 .btn-fonte:active {
     transform: translateY(2px);
     box-shadow: 0px 0px 0px black;
