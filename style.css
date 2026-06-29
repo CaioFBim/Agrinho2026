@@ -77,7 +77,7 @@ h1 {
 }
 
 .btn-verde:active {
-    transform: translateY(3px); /* Efeito de apertar o botão */
+    transform: translateY(3px); 
     box-shadow: 1px 1px 0px black;
 }
 
@@ -142,6 +142,7 @@ h1 {
     line-height: 1.6;
     margin-bottom: 25px;
     color: white;
+    transition: font-size 0.2s ease; /* Transição suave ao mudar tamanho da fonte */
 }
 
 .referencias-pequenas {
@@ -154,9 +155,37 @@ h1 {
     color: white;
 }
 
-/* Espaço para o botão no final das páginas */
 .container-proximo-topico {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 40px; 
+}
+
+/* --- CONTROLES DE FONTE (ACESSIBILIDADE) --- */
+.controles-fonte {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-fonte {
+    background-color: #71E86B;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.1s;
+}
+
+.btn-fonte:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px black;
 }

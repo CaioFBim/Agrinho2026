@@ -1,5 +1,4 @@
-console.log("Sistema atualizado com sucesso!");
-
+// --- NAVEGAÇÃO ENTRE PÁGINAS ---
 const btnIniciar = document.getElementById('btn-iniciar');
 const btnIrPag3 = document.getElementById('btn-ir-pag3');
 const btnIrPag4 = document.getElementById('btn-ir-pag4');
@@ -32,4 +31,29 @@ btnVoltarInicio.addEventListener('click', () => {
     telaPag4.classList.add('escondida');
     telaHome.classList.remove('escondida');
     window.scrollTo(0, 0);
+});
+
+// --- CONTROLE DE TAMANHO DA FONTE ---
+const btnAumentar = document.getElementById('btn-aumentar-fonte');
+const btnDiminuir = document.getElementById('btn-diminuir-fonte');
+const textosExplicacao = document.querySelectorAll('.texto-explicacao p');
+
+let tamanhoAtualFonte = 22; // Tamanho original do CSS
+
+btnAumentar.addEventListener('click', () => {
+    if (tamanhoAtualFonte < 34) { 
+        tamanhoAtualFonte += 2;
+        textosExplicacao.forEach(paragrafo => {
+            paragrafo.style.fontSize = tamanhoAtualFonte + 'px';
+        });
+    }
+});
+
+btnDiminuir.addEventListener('click', () => {
+    if (tamanhoAtualFonte > 14) { 
+        tamanhoAtualFonte -= 2;
+        textosExplicacao.forEach(paragrafo => {
+            paragrafo.style.fontSize = tamanhoAtualFonte + 'px';
+        });
+    }
 });
