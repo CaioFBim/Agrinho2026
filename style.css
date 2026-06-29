@@ -158,3 +158,14 @@ h1 {
     margin-top: 60px;
     margin-bottom: 40px; 
 }
+#secao-importancia, 
+#secao-sustentabilidade {
+    background-color: #8bafcc !important; 
+    position: relative;
+    z-index: 2; 
+}
+
+#secao-importancia .conteudo-definicoes, 
+#secao-sustentabilidade .conteudo-definicoes {
+    background-color: #8bafcc !important;
+}
