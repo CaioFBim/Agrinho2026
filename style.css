@@ -152,4 +152,5 @@ body.modo-escuro .btn-fonte { background-color: #2d3748; color: #71E86B; border-
     /* Encolhe os botões flutuantes para economizar espaço */
     .controles-fonte { top: 10px; right: 10px; gap: 5px; }
     .btn-fonte { width: 40px; height: 40px; font-size: 16px; border-width: 2px; }
+    /* MODO ESCURO                                */
 }
